@@ -552,6 +552,10 @@ extension EKContentView {
             return
         }
         
+        if keyboardAtts.height < 66.0 {
+            return
+        }
+        
         if entrance {
             inKeyboardConstraint.constant = -(keyboardAtts.height + offset.bottom)
             inKeyboardConstraint.priority = .must
